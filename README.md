@@ -1,38 +1,88 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Solitaire Front End Candidate Assignment
 
-## Getting Started
+This project is intended for the requirement of recruitment process at Solitaire (PT Bangun Digital Nusantara)
 
-First, run the development server:
+## Authors
+
+- [@Farrely-F](https://www.github.com/octokatherine)
+
+## Tech Stack
+
+**Client:** React, Next 13, Axios, TailwindCSS, react-fast-marquee, Riple UI
+
+**Deployment:** Vercel
+
+## Optimizations
+
+What optimizations did you make in your code? E.g. refactors, performance improvements, accessibility
+
+## Lessons Learned
+
+- Responsive Design Way of Thinking
+- NextJs Routing, Feature, and it's Advantage
+- Secure code
+
+## Features
+
+- Modern UI
+- Skeleton Load
+- Responsive Design
+- Auth Simulation
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+  git clone https://github.com/Farrely-F/solitaire-frontend-assignment.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the project directory
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+  cd solitaire-frontend-assignment
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Install dependencies
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+  npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Configure local .env
 
-## Learn More
+- create a copy of .env.example and remove .example. Adjust with the base API URL you have
 
-To learn more about Next.js, take a look at the following resources:
+Start the development server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## FAQ
 
-## Deploy on Vercel
+#### How to simulate register?
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- go to https://reqres.in and then look up for the POST register successfull endpoint. Copy the payload:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+{
+    "email": "eve.holt@reqres.in",
+    "password": "pistol"
+}
+```
+
+- on the site page https://solitaire-frontend-assignment.vercel.app/register input corresponding email and password. If success you will be redirected back to home and your token is saved on local storage
+
+#### How to simulate login?
+
+- similar like register go to https://reqres.in and lookup for the login endpoint:
+
+```bash
+{
+    "email": "eve.holt@reqres.in",
+    "password": "cityslicka"
+}
+```
+
+- Copy the email and password, input that value to https://solitaire-frontend-assignment.vercel.app/login
