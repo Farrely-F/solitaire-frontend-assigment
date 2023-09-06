@@ -37,7 +37,7 @@ const UserList = () => {
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div className="min-h-screen flex flex-col w-full py-28 px-4 md:px-16 md:py-32 bg-gradient-to-tr from-pink-800 via-pink-900 to-rose-600 text-white">Error: {error.message}</div>;
   }
 
   const { total_pages: totalPages, data: users } = data;
@@ -57,7 +57,7 @@ const UserList = () => {
               key={user.id}
             >
               <Image className="rounded-s-lg object-cover" src={user.avatar} alt={`${user.first_name} ${user.last_name}`} width={100} height={100} />
-              <div className="flex flex-col w-[90%] justify-center px-3">
+              <div className="min-h-[80px] flex flex-col w-[90%] justify-center px-3">
                 <h3 className="text-lg font-bold">{`${user.first_name} ${user.last_name}`}</h3>
                 <a href={`mailto:${user.email}`} className="text-gray-300">
                   {user.email}
@@ -66,7 +66,9 @@ const UserList = () => {
             </li>
           ))
         ) : (
-          <li>No users found</li>
+          <div className="min-h-screen flex flex-col w-full py-28 px-4 md:px-16 md:py-32 bg-gradient-to-tr from-pink-800 via-pink-900 to-rose-600 text-white">
+            <li>No users found</li>
+          </div>
         )}
       </ul>
       <div className="pagination flex gap-5 items-center">
