@@ -4,7 +4,8 @@ This project is intended for the requirement of recruitment process at Solitaire
 
 ## Authors
 
-- [@Farrely-F](https://www.github.com/octokatherine)
+- [@Farrely-F](https://www.github.com/farrely-f)
+- [LinkedIn](https://www.linkedin.com/in/farrelyf/)
 
 ## Tech Stack
 
